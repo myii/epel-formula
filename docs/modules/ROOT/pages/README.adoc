@@ -1,0 +1,95 @@
+= epel
+
+https://travis-ci.com/saltstack-formulas/epel-formula[image:https://travis-ci.com/saltstack-formulas/epel-formula.svg?branch=master[Travis CI Build Status]]
+https://github.com/semantic-release/semantic-release[image:https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg[Semantic Release]]
+
+Install the EPEL RPM and GPG key on RHEL 5/6/7/8, CentOS 5/6/7/8, Amazon
+Linux, or Oracle Linux 5/6/7/8.
+
+== General notes
+
+See the full
+https://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html[SaltStack
+Formulas installation and usage instructions].
+
+If you are interested in writing or contributing to formulas, please pay
+attention to the
+https://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html#writing-formulas[Writing
+Formula Section].
+
+If you want to use this formula, please pay attention to the `FORMULA`
+file and/or `git tag`, which contains the currently released version.
+This formula is versioned according to http://semver.org/[Semantic
+Versioning].
+
+See
+https://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html#versioning[Formula
+Versioning Section] for more details.
+
+If you need (non-default) configuration, please pay attention to the
+`pillar.example` file and/or link:#_special_notes[Special notes] section.
+
+== Contributing to this repo
+
+*Commit message formatting is significant!!*
+
+Please see
+xref:main::CONTRIBUTING.adoc[How
+to contribute] for more details.
+
+== Special notes
+
+None
+
+== Available states
+
+=== `epel`
+
+Installs the GPG key and EPEL RPM package for the current OS.
+
+The EPEL testing repository can be enabled by setting the Pillar
+`epel:testing: true`.
+
+The EPEL release to be installed can be defind by setting the Pillar
+`epel:release: 7-8`
+
+== Testing
+
+Linux testing is done with `kitchen-salt`.
+
+=== Requirements
+
+* Ruby
+* Docker
+
+[source,bash]
+----
+$ gem install bundler
+$ bundle install
+$ bin/kitchen test [platform]
+----
+
+Where `[platform]` is the platform name defined in `kitchen.yml`, e.g.
+`debian-9-2019-2-py3`.
+
+=== `bin/kitchen converge`
+
+Creates the docker instance and runs the `epel` main state, ready for
+testing.
+
+=== `bin/kitchen verify`
+
+Runs the `inspec` tests on the actual instance.
+
+=== `bin/kitchen destroy`
+
+Removes the docker instance.
+
+=== `bin/kitchen test`
+
+Runs all of the stages above in one go: i.e. `destroy` + `converge` +
+`verify` + `destroy`.
+
+=== `bin/kitchen login`
+
+Gives you SSH access to the instance for manual testing.

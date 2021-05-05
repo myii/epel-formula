@@ -1,0 +1,150 @@
+= Changelog
+
+:sectnums!:
+
+== link:++https://github.com/saltstack-formulas/epel-formula/compare/v1.15.4...v1.15.5++[1.15.5^] (2020-12-25)
+
+=== Bug Fixes
+
+* *map.jinja:* update EL6 URLs
+(https://github.com/saltstack-formulas/epel-formula/commit/7a87d427ea2b1f746f9028d0fa670138780559e0[7a87d42^])
+
+== link:++https://github.com/saltstack-formulas/epel-formula/compare/v1.15.3...v1.15.4++[1.15.4^] (2020-12-25)
+
+=== Bug Fixes
+
+* *map.jinja:* update GPG url
+(https://github.com/saltstack-formulas/epel-formula/commit/a5e61611c03832b2dc0a25af7f31d5d4c55f2896[a5e6161^])
+
+== link:++https://github.com/saltstack-formulas/epel-formula/compare/v1.15.2...v1.15.3++[1.15.3^] (2020-12-22)
+
+=== Bug Fixes
+
+* *map.jinja:* update to `epel-release-8-10.el8.noarch.rpm`
+(https://github.com/saltstack-formulas/epel-formula/commit/82f8d683199cd6e79fe30ccbd73ec77f3cca4ef8[82f8d68^])
+* osmajorrelease is int instead of str since 2017.7.1
+(https://github.com/saltstack-formulas/epel-formula/commit/5fdd1fc054af4f156fae7c20ba191e051938eef8[5fdd1fc^]),
+closes
+https://github.com//github.com/saltstack/salt/blob/v2017.7.1/salt/grains/core.py/issues/L1675[/github.com/saltstack/salt/blob/v2017.7.1/salt/grains/core.py#L1675^]
+
+=== Continuous Integration
+
+* *commitlint:* ensure `upstream/master` uses main repo URL [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/ae613cddddc248b1de97d5e9d0125d22435432d4[ae613cd^])
+* *gitlab-ci:* add `rubocop` linter (with `allow_failure`) [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/858f8f08c5a63459bac7c329b6cf1e86ac2aa428[858f8f0^])
+
+== link:++https://github.com/saltstack-formulas/epel-formula/compare/v1.15.1...v1.15.2++[1.15.2^] (2020-12-16)
+
+=== Bug Fixes
+
+* *map.jinja:* update link to `rpm` for `EPEL-7`
+(https://github.com/saltstack-formulas/epel-formula/commit/b778c629170be41abcc110779b34c2ddd319b920[b778c62^])
+* *map.jinja:* update link to `rpm` for `EPEL-8`
+(https://github.com/saltstack-formulas/epel-formula/commit/1ad5806ecd2764ac0b8212afd7a0af78b3c799a4[1ad5806^])
+
+=== Continuous Integration
+
+* *gemfile.lock:* add to repo with updated `Gemfile` [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/cc0046735698e6763be5298fcf4ee3713d6f7281[cc00467^])
+* *gitlab-ci:* use GitLab CI as Travis CI replacement
+(https://github.com/saltstack-formulas/epel-formula/commit/3cf58d8b277deec223fe0c3665221e53accc53c0[3cf58d8^])
+* *kitchen:* use `saltimages` Docker Hub where available [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/ace478e4b8413a423390ee38af5fe815b1fdef9b[ace478e^])
+* *pre-commit:* add to formula [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/f57867a99ba6949517abd1916c32ea7b37512adb[f57867a^])
+* *pre-commit:* enable/disable `rstcheck` as relevant [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/a160c4a16c868b591f22ea267dfef3ce42e0b8c9[a160c4a^])
+* *pre-commit:* finalise `rstcheck` configuration [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/8039f7cbbbef5e428a4c15a58f3ed8ce176e35a1[8039f7c^])
+* *travis:* add notifications => zulip [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/d90fb30a0af6bcd447527a55ce7ded21323f05af[d90fb30^])
+* *workflows/commitlint:* add to repo [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/8be296eff1df2247ae6d7f4bd6d04e697d416cbe[8be296e^])
+
+=== Tests
+
+* *packages_spec:* refactor to check first part of version number only
+(https://github.com/saltstack-formulas/epel-formula/commit/a4f2f2c532ba316d6cce2516760c710c5cb045ec[a4f2f2c^])
+
+== link:++https://github.com/saltstack-formulas/epel-formula/compare/v1.15.0...v1.15.1++[1.15.1^] (2020-02-13)
+
+=== Bug Fixes
+
+* *map.jinja:* update link to `rpm` for `EPEL-8`
+(https://github.com/saltstack-formulas/epel-formula/commit/3e90e0de36217ab6d15bc03dc907524ab49d7727[3e90e0d^])
+
+=== Continuous Integration
+
+* *gemfile:* restrict `train` gem version until upstream fix [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/bddcd80a2b2c59846f26cc11cd855199837ec8bd[bddcd80^])
+* *kitchen:* avoid using bootstrap for `master` instances [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/30ade3d539d2b92c1ac0521952824c0221c9602d[30ade3d^])
+* *kitchen:* use `develop` image until `master` is ready (`amazonlinux`)
+ [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/5db23441832b058f2b4c6b4f2ddc757ab4647f50[5db2344^])
+* *kitchen:* use `provision_command` for `amazonlinux-1` images
+(https://github.com/saltstack-formulas/epel-formula/commit/2cfcfde545303a455a662854b506d2cb36588a9d[2cfcfde^]),
+closes
+https://github.com//github.com/saltstack-formulas/vault-formula/pull/50/issues/pullrequestreview-312037893[/github.com/saltstack-formulas/vault-formula/pull/50#pullrequestreview-312037893^]
+* *kitchen:* use `stable` for `amazonlinux-1` bootstrap [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/472434b14e6861f6a17f297b8c7fd501dd4cae4a[472434b^])
+* *kitchen+travis:* use bootstrapped `amazonlinux-1` images [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/37d2fc6ff4089ab173766aeac87964987e38c11e[37d2fc6^])
+* *travis:* apply changes from build config validation [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/904b4fc236b4a93b8d5a6feeb682a99b958f30cb[904b4fc^])
+* *travis:* opt-in to `dpl v2` to complete build config validation [skip
+ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/5fa5251c74eb9dccd1fcd0e1ca5038e34f075a4d[5fa5251^])
+* *travis:* quote pathspecs used with `git ls-files` [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/6d286241e01658611dd247dce656157f49afddeb[6d28624^])
+* *travis:* run `shellcheck` during lint job [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/8491178dcd9bab4f5419fcc5ade0a9f38f1a4281[8491178^])
+* *travis:* use `major.minor` for `semantic-release` version [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/f7f2342a397e699b65053a35dba0b3c75ccfbce7[f7f2342^])
+* *travis:* use build config validation (beta) [skip ci]
+(https://github.com/saltstack-formulas/epel-formula/commit/ecab107ae92470a8e6d53b1dc18d76d1c4f3b345[ecab107^])
+
+== link:++https://github.com/saltstack-formulas/epel-formula/compare/v1.14.1...v1.15.0++[1.15.0^] (2019-11-03)
+
+=== Bug Fixes
+
+* *map.jinja:* fix typo `osmajorreleaes`
+(https://github.com/saltstack-formulas/epel-formula/commit/4f9b8d46ee1c6f890e6f5baf824cfa42853e0d91[4f9b8d4^])
+* *map.jinja:* update `epel/8` package link
+(https://github.com/saltstack-formulas/epel-formula/commit/474ac8588d87f782174a179fa4ae4aad6bb3e401[474ac85^])
+* *yamllint:* fix all errors
+(https://github.com/saltstack-formulas/epel-formula/commit/d670ff7a9327637a6baac8a9bf0aaa6ded564494[d670ff7^])
+
+=== Code Refactoring
+
+* *map.jinja:* use consistent chronological ordering of releases
+(https://github.com/saltstack-formulas/epel-formula/commit/27a2c3b2703b5e4d604e51ec99b3885647835b14[27a2c3b^])
+
+=== Documentation
+
+* *readme:* modify according to standard structure
+(https://github.com/saltstack-formulas/epel-formula/commit/1892879754723444ac73948653d39129da9b08fd[1892879^]),
+closes
+https://github.com//github.com/saltstack-formulas/epel-formula/pull/52/issues/issuecomment-547653363[/github.com/saltstack-formulas/epel-formula/pull/52#issuecomment-547653363^]
+* *readme:* move to `docs/` directory
+(https://github.com/saltstack-formulas/epel-formula/commit/eb8b8afafd2810d1a3a6e83ed3d24cb36fc67647[eb8b8af^])
+
+=== Features
+
+* *amazon:* use major release `2` as the default
+(https://github.com/saltstack-formulas/epel-formula/commit/93654e91059878210968b56d82a94a0d76912d39[93654e9^])
+* *semantic-release:* implement for this formula
+(https://github.com/saltstack-formulas/epel-formula/commit/63790984afed54d9e0b8f6535e89ddb5f048b487[6379098^])
+
+=== Styles
+
+* *map.jinja:* add a space after the colon
+(https://github.com/saltstack-formulas/epel-formula/commit/cf14db0a6ebc0de31a8c71815814fb819babb3b7[cf14db0^])
+
+=== Tests
+
+* *inspec:* provide tests for the repo package and config
+(https://github.com/saltstack-formulas/epel-formula/commit/35b98d55c8ea4b786a889e33bc0418d2f2d87dbe[35b98d5^])
+* *pillar:* add test pillar
+(https://github.com/saltstack-formulas/epel-formula/commit/0efbe3a743ba8890f5841ec4295fee9538400674[0efbe3a^])
